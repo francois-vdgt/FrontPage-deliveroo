@@ -1,0 +1,257 @@
+.TopService{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 46px;
+    margin-top: 10px;
+    z-index: 100;
+}
+
+/* ---------------Article cardService------------------ */
+
+.container-topCard{
+    display: flex;
+}
+
+.article-topService{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    gap: 34px;
+    align-items: center;
+}
+
+.article-topService > h2, .topCard > h3, .topCard > p{
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.container-topCard{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container-topCard > :nth-child(1){
+    background-image: url(https://images.prismic.io/deliveroo-restaurants/fa719ec8-ca67-4be8-80f0-8d8d40672e73_restaurant-card.jpg?auto=compress,format);
+  
+}
+
+.container-topCard > :nth-child(2){
+    background-image: url(https://deliveroo-restaurants.cdn.prismic.io/deliveroo-restaurants/15c96642-a87a-4502-b6d7-fcd5904b0358_Grocery+Header+Background.svg);
+}
+
+.topCard{
+    position: relative;
+    width: 48%;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.topCard::after{
+   content: "";
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0px;
+   left: 0px;
+   border-radius: 12px;
+   background: linear-gradient(180deg, rgba(255,255,255,0) 45%, rgba(0,0,0,1) 100%);
+   z-index: 1;
+}
+
+.topCard a{
+   margin-top: 16px;
+}
+
+.topCard > h3, .topCard > p, .topCard a{
+    position: relative;
+    z-index: 2;
+}
+
+@media  screen and (max-width: 980px) {
+    .article-topService{
+        width: 90%;
+    }
+}
+
+@media  screen and (max-width: 830px) {
+    .container-topCard{
+       flex-wrap: wrap;
+       justify-content: center;
+       gap: 24px;
+    }
+
+    .topCard{
+        min-width: 400px;
+        width: 100%;
+    }
+
+    .topCard{
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 580px){
+    .article-topService{
+        width: 100%;
+        padding: 12px;
+        background-color: purple;
+        box-sizing: border-box;
+    }
+
+    .topCard{
+        min-width: 100%;
+    }
+}
+/* ---------------Article number------------------ */
+
+.article-number{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+.article-number > h3{
+    align-self: center;
+    font-size: 28px;
+}
+
+.container-number{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.dispo-number{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: fit-content;
+}
+
+.dispo-number > img{
+    width: 110px;
+}
+
+.dispo-number > :nth-child(2){
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.dispo-number p{
+    margin: 8px;
+    color: #2e3333;
+}
+
+/* ---------------Article offer------------------ */
+
+.article-offer{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    height: fit-content;
+    color: var(--CTA-color);
+}
+
+.offer-text{
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offer-text > h3{
+    color: var(--black);
+    font-size: 36px;
+    margin: 0;
+}
+
+.article-offer > img{
+    width: 49%;
+    height: 282px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.offer-list{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.offer-list li{
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+.offer-list p{
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+
+@media screen and (max-width: 1324px){
+    .offer-text{
+        width: 100%;
+    }
+
+    .article-offer > img{
+        width: 30%;
+    }
+
+    .article-offer{
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .offer-text{
+        width: 100%;
+    }
+
+    .article-offer > img{
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 580px) {
+    .TopService{
+        margin-top: 300px;
+    }
+}
+
+@media screen and (max-width: 290px){
+   .TopService{
+        margin-top: 340px;
+   }
+}
+
+
+@media  screen and (max-width: 980px) {
+    .article-offer, .article-number{
+        width: 90%;
+    }
+}

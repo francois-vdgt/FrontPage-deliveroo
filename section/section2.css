@@ -1,0 +1,116 @@
+.activity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background-color: var(--third-color);
+    color: #ffffff;
+    padding: 30px;
+    margin: 46px 0 45px 0;
+}
+
+.activity-text{
+    text-align: center;
+}
+
+.activity-text {
+    text-align: center;
+}
+
+.activity-text > *{
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.container-card-activity{
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    gap: 24px;
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.activity-card{
+    position: relative;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 54px;
+    width: 244px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.activity-card > *{
+    position: relative;
+    z-index: 10;
+}
+
+.activity-card::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 30%, rgba(0,0,0,1) 86%);
+    z-index: 1;
+}
+
+.card-activity-text h4{
+    font-size: 40px;
+    margin: 0;
+    margin-top: 164px;
+}
+
+.card-activity-text p{
+   margin: 0;
+}
+
+.container-card-activity >:nth-child(1){
+    background-image: url(https://images.prismic.io/deliveroo-restaurants/4eb3262e-497f-4505-8498-1e051f2c3619_Marketing-card.jpg?auto=compress,format);
+}
+
+.container-card-activity >:nth-child(2){
+    background-image: url(https://images.prismic.io/deliveroo-restaurants/95c98db7-bcbd-4dfa-9ad1-fa1bf86c68c7_delivery_card_gb.jpg?auto=compress,format);
+}
+
+.container-card-activity >:nth-child(3){
+    background-image: url(https://images.prismic.io/deliveroo-restaurants/fddfbef3-a00c-4c0d-bf30-99340e1d0586_pickup_card_gb.jpg?auto=compress,format);
+}
+
+@media screen and (max-width: 1660px){
+    .container-card-activity{
+        justify-content: center;
+    }
+    
+    .activity-card{
+        width: 30%; 
+        min-width: 200px;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 967px){
+    .container-card-activity{
+        width: 100%;
+    }
+
+    .activity-card{
+        min-width: 300px;
+    }
+}
+
+
+@media screen and (max-width: 556px){
+    .activity-card{
+        min-width: 100%; 
+    }
+}

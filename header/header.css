@@ -1,0 +1,265 @@
+header{
+    position: fixed;
+    top: 0;
+    display:flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 64px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.5s;
+    z-index: 9000;
+}
+
+.scrolled{
+    background-color: #ffffff; 
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 28px
+}
+
+.menu .drop-down-menu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.menu .drop-down-menu:hover{
+    cursor: pointer;
+}
+
+.drop-down-menu > span{
+    width:fit-content
+}
+
+.drop-down-menu:hover > span,
+.menu-span-active{
+    color: var(--CTA-color);
+}
+
+.menu-list{
+    position: absolute;
+    top: 36px;
+    left: -9999px;
+    padding: 0;
+    list-style: none;
+    width: max-content;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.menu-list-active{
+    left: 0px;
+}
+
+.menu-list li{
+    padding: 16px;
+    border-bottom: solid 1px #d1d4d4;
+    color : black;
+}
+
+.menu-list li:hover{
+    background-color: #fcfafa;
+    color: var(--CTA-color);
+}
+
+.menu-list :last-child{
+   border-bottom: none;
+}
+
+.menu a{
+    text-decoration: none;
+    border-radius: 6px;
+    padding: 12px 22px;
+}
+
+.btn-login{
+    border: solid 1px #d1d4d4;
+    color: var(--CTA-color);
+    background-color: #ffffff; 
+}
+
+.btn-login:hover{
+    border: solid 1px #b1b4b4;
+}
+
+.btn-partner{
+    background-color: #00c2b3;
+    color: #ffffff;
+}
+
+.btn-partner:hover{
+    background-color: #03afa1;
+}
+
+.container-btn-burger{
+    display: none;
+    height: auto;
+    width: auto;
+}
+
+.btn-humburger{
+    position: relative;
+    display: block;
+    min-width: 42px;
+    height: 4px;
+    background-color: #00c2b3;
+    transition: all .2s;
+}
+
+.btn-humburger::after,
+.btn-humburger::before{
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 4px;
+    background-color: #00c2b3;
+}
+
+.btn-humburger::after{
+    top: 10px;
+}
+
+.btn-humburger::before{
+    bottom: 10px;
+}
+
+.burgerStyle{
+    color: #ffffff;
+}
+
+@media screen and (max-width: 1248px){
+    .btn-login{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px){
+   /* passer en burger menu */
+   .container-btn-burger{
+        display: block;
+    }
+
+    .menu{
+        flex-direction: column;
+        position: absolute;
+        top: -5000px;
+    }
+
+    .menu-active{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        font-size: 34px;
+        text-align: center; 
+        gap: 0;
+        color: #ffffff;
+        height: 100vh;
+        overflow-y: auto;
+        background-color: #ffffff;
+    }
+
+    .menu .drop-down-menu{
+        flex-direction: column;
+        font-weight: 600;
+        width: 100%;
+        padding: 32px 0;
+        gap: 16px;
+        box-sizing: border-box;
+    }
+
+    .menu-caret{
+        display: none;
+    }
+
+    .menu-list{
+        display: none;
+        position:initial;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-list-active{
+        display: block;
+        border-radius: 0;
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    .drop-down-menu:hover > span {
+        color: #ffffff;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+        border: none;
+        display: block;
+        box-sizing: border-box;
+        border-radius: 0;
+        padding: 32px;
+    }
+
+    .menu a :hover{
+       color: #ffffff;
+    }
+
+    .burger-active{
+        rotate: 45deg;
+    }
+
+    .burger-active::before{
+        opacity: 0;
+    }
+
+    .burger-active::after{
+        rotate: -90deg;
+        top: 0;
+    }
+
+    .menu > :nth-child(1){
+        background-color: #009ba9;
+    }
+    .menu > :nth-child(2){
+        background-color: #5a0082;
+        
+    }
+    .menu > :nth-child(3){
+        background-color: #e34d54;
+        
+    }
+    .menu > :nth-child(3){
+        background-color: #e1ab00;
+        
+    }
+    .menu > :nth-child(4){
+        background-color: #9c006d;
+        
+    }
+    .menu > :nth-child(5){
+        background-color: #e34d54;
+        color: #ffffff;
+    }
+    .menu > :nth-child(6){
+        background-color:#00c2b3;
+        margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 430px){
+    header{
+        padding: 22px 10%;
+    }
+}
+
+
+

@@ -1,0 +1,116 @@
+.hero-banner{
+    background-image: url(../asset/img/HomeHeaderBackground.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero-banner-separator{
+    background-image: url(../asset/img/slant.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    bottom: 1px;
+    translate: 0 80%;
+    height: 200px;
+}
+
+.hero-banner-separator::after{
+    position: absolute;
+    content: "";
+    top: 0px;
+    translate: 0 -99%;
+    width: 100%;
+    height: 530px;
+    background: linear-gradient(180deg, rgba(171,195,226,0) 8%, rgb(0, 0, 0) 99%);
+    z-index: 1;
+}
+
+.hero-banner::before{
+    position: absolute;
+    z-index: 0;
+    content: "";
+    top: 0px;
+    width: 100%;
+    height: 130px;
+    background: linear-gradient(0deg, rgba(171,195,226,0) 10%, rgba(0,0,0,1) 98%);
+}
+
+.hero-text{
+    translate: 0px -42%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    z-index: 5;
+}
+
+.hero-text h1{
+    margin: 0;
+    font-size: 54px;
+}
+
+.hero-text p{
+    font-size: 1.2rem;
+    margin-bottom: 34px;
+}
+
+.hero-text a{
+    font-weight: 600;
+    background-color: #00ccbc;    
+    padding: 12px 24px;
+    width: 32%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 580px){
+    .hero-banner{
+        background-image: url(https://deliveroo-restaurants.cdn.prismic.io/deliveroo-restaurants/decf441d-d956-46a0-ac7f-f801e4820070_Home+Header+Background+Mobile.svg);
+        height: 50vh;
+        width: 100vw;
+    }
+
+    .hero-banner-separator{
+        display: none;
+    }
+
+    .hero-text{
+        translate: 0px 110%;
+        color: var(--black);
+    }
+
+    .hero-text > h1{
+        font-size: 35px;
+    }
+    
+    .hero-text > a{
+        width: 50%;
+        font-size: 16px;
+        color: #ffffff;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .hero-text a{
+        text-align: center;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .hero-text{
+        translate: 0px 98%;
+    }
+}
+
+
